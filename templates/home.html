@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+	<div class="jumbotron text-center">
+		<h1>Welcome to Home</h1>
+		<p class="lead">First, when the application runs we should show a home page with the latest bucket list items added by users. So let's add our home page to our application folder.</p>
+		{% if session.logged_in == NULL %}
+			<a href="/register" class="btn btn-primary">Register</a>
+			<a href="/login" class="btn btn-success">Log in</a>
+		{% endif %}
+	</div>
+{% endblock %}
